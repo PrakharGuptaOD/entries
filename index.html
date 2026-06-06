@@ -1,1 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Gallery of My Life | Prakhar Gupta</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* Minimalist aesthetic with elegant typography */
+        :root {
+            --bg: #fafafa;
+            --text: #111;
+            --text-secondary: #555;
+            --accent: #000;
+            --border: #ddd;
+            --hover-bg: #f4f4f4;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg);
+            color: var(--text);
+            max-width: 800px; /* Slightly narrower for reading focus */
+            margin: 0 auto;
+            padding: 0 20px;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 0 20px 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 50px;
+        }
+
+        .back-link {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        /* Hero / Intro Section */
+        .intro-section {
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            letter-spacing: -0.02em;
+        }
+
+        .intro-paragraph {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            max-width: 700px;
+        }
+
+        /* Chapter / Module Links Layout */
+        .chapter-list {
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid var(--border);
+            margin-bottom: 60px;
+            flex-grow: 1;
+        }
+
+        .chapter-item {
+            display: flex;
+            align-items: baseline;
+            padding: 30px 0;
+            border-bottom: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: background-color 0.3s, padding-left 0.3s;
+        }
+
+        .chapter-item:hover {
+            background-color: var(--hover-bg);
+            /* Adds a subtle indent effect on hover */
+            padding-left: 15px; 
+            padding-right: 15px;
+            border-bottom-color: var(--accent);
+        }
+
+        .chapter-number {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            width: 50px;
+            flex-shrink: 0;
+            font-style: italic;
+        }
+
+        .chapter-content {
+            flex-grow: 1;
+        }
+
+        .chapter-title {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .chapter-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            max-width: 500px;
+        }
+
+        .chapter-meta {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #888;
+            margin-left: 20px;
+            white-space: nowrap;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.8rem; }
+            .chapter-item {
+                flex-direction: column;
+                position: relative;
+            }
+            .chapter-number {
+                margin-bottom: 10px;
+            }
+            .chapter-meta {
+                margin-left: 0;
+                margin-top: 15px;
+                font-size: 0.8rem;
+            }
+            .chapter-item:hover {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.htm" class="back-link"><i class="fas fa-arrow-left"></i> Home</a>
+        <span style="font-family: var(--font-heading); font-style: italic; color: var(--text-secondary);">Chronicles</span>
+    </header>
+
+    <main>
+        <section class="intro-section">
+            <h1>Gallery of My <i>Life.</i></h1>
+            <p class="intro-paragraph">
+                A curated collection of written entries chronicling my personal experiences, reflections, and journeys. This space serves as an archive of the milestones, the lessons learned, and the quiet moments of growth in between.
+            </p>
+        </section>
+
+        <div class="chapter-list">
+            
+            <a href="chapter1.html" class="chapter-item">
+                <div class="chapter-number">01</div>
+                <div class="chapter-content">
+                    <h2 class="chapter-title">The Genesis of Logic</h2>
+                    <p class="chapter-desc">Early encounters with code, understanding frameworks, and the shift from consuming technology to building it.</p>
+                </div>
+                <div class="chapter-meta">2024 / Reflection</div>
+            </a>
+
+            <a href="chapter2.html" class="chapter-item">
+                <div class="chapter-number">02</div>
+                <div class="chapter-content">
+                    <h2 class="chapter-title">Systems & Communities</h2>
+                    <p class="chapter-desc">Scaling operations at Masaiverse, handling high-concurrency systems, and learning to manage digital societies.</p>
+                </div>
+                <div class="chapter-meta">2025 / Milestone</div>
+            </a>
+
+            <a href="chapter3.html" class="chapter-item">
+                <div class="chapter-number">03</div>
+                <div class="chapter-content">
+                    <h2 class="chapter-title">The Sub-Sindhu Thesis</h2>
+                    <p class="chapter-desc">Tackling cultural hallucinations in AI. The research, the roadblocks, and preserving heritage through synthetic data.</p>
+                </div>
+                <div class="chapter-meta">2025 / Academic</div>
+            </a>
+
+            <a href="chapter4.html" class="chapter-item">
+                <div class="chapter-number">04</div>
+                <div class="chapter-content">
+                    <h2 class="chapter-title">OVIK: Vision & Beyond</h2>
+                    <p class="chapter-desc">Conceptualizing an institute of innovation. Thoughts on universal education, architecture, and future prospects.</p>
+                </div>
+                <div class="chapter-meta">2026 / Vision</div>
+            </a>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Prakhar Gupta.</p>
+        <div style="font-family: var(--font-heading); font-style: italic;">
+            Documenting the journey.
+        </div>
+    </footer>
+
+</body>
+</html>
