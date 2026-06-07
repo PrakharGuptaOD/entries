@@ -26,6 +26,8 @@ body {
     flex-direction: column;
     min-height: 100vh;
     line-height: 1.6; /* Matches standard website line-height */
+    background-image: linear-gradient(#eaeaea 1px, transparent 1px);
+    background-size: 100% 40px;
 }
 
 /* Navigation */
