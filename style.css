@@ -26,8 +26,10 @@ body {
     flex-direction: column;
     min-height: 100vh;
     line-height: 1.6; /* Matches standard website line-height */
-    background-image: linear-gradient(#eaeaea 1px, transparent 1px);
-    background-size: 100% 40px;
+    background-image: repeating-linear-gradient(45deg, #f4f4f4 25%, transparent 25%, transparent 75%, #f4f4f4 75%, #f4f4f4),
+                      repeating-linear-gradient(45deg, #f4f4f4 25%, transparent 25%, transparent 75%, #f4f4f4 75%, #f4f4f4);
+    background-position: 0 0, 4px 4px;
+    background-size: 8px 8px;
 }
 
 /* Navigation */
