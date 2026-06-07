@@ -19,12 +19,13 @@ body {
     font-family: var(--font-body);
     background-color: var(--bg);
     color: var(--text);
-    max-width: 750px; /* Optimal width for reading long-form text */
+    max-width: 750px; 
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    line-height: 1.6; /* Matches standard website line-height */
 }
 
 /* Navigation */
@@ -77,16 +78,15 @@ h1 {
     color: var(--text);
 }
 
+/* Reverted Paragraph Styling */
 article p {
-    font-size: 1.25rem; /* Larger font size for easy reading */
-    line-height: 1.9;    /* Generous line height for breathability */
-    color: #333;
-    margin-bottom: 30px;
+    font-size: 1rem; /* Standard font size */
+    color: var(--text-secondary); /* Matches secondary text color used elsewhere */
+    margin-bottom: 25px;
 }
 
 article p:first-of-type {
-    font-size: 1.35rem; /* Make the leading paragraph slightly larger */
-    color: var(--text);
+    color: var(--text); /* Keeps the leading paragraph slightly darker, but same size */
 }
 
 /* Footer / Pagination */
@@ -129,6 +129,5 @@ article p:first-of-type {
 
 @media (max-width: 600px) {
     h1 { font-size: 2.5rem; }
-    article p { font-size: 1.15rem; }
     .next-title { font-size: 1.5rem; }
 }
